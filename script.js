@@ -75,7 +75,7 @@ function download() {
         title: localStorage.getItem("title"),
         note: localStorage.getItem("note")
     }
-    let file = new Blob([JSON.stringify(content)], { type: 'text/plain' });
+    let file = new Blob([JSON.stringify(content)], { type: 'application/json' });
     a.href = URL.createObjectURL(file);
     a.download = 'database-' + Date.now() + '.json';
     a.click();
