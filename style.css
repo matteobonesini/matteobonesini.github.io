@@ -1,0 +1,90 @@
+:root {
+    --main-bg: whitesmoke;
+    --main-text-color: black;
+}
+
+[data-theme="dark"] {
+    --main-bg: black;
+    --main-text-color: white;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: monospace;
+    background-color: var(--main-bg);
+}
+
+body {
+    background-color: var(--main-bg);
+    color: var(--main-text-color);
+    min-height: 100vh;
+}
+
+header {
+    text-align: center;
+}
+
+header h1 {
+    padding: 2rem 0 1rem;
+}
+
+header div {
+    padding: 1rem 0.5rem;
+    display: inline-block;
+}
+
+main .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+main .container input {
+    display: block;
+    width: 100%;
+    font-size: 2rem;
+    text-align: center;
+    border: 0;
+    margin: 2rem 0 4rem;
+    background-color: var(--main-bg);
+    color: var(--main-text-color);
+}
+
+main .container input:focus-visible, main .container textarea:focus-visible {
+    outline: none;
+}
+
+main .container textarea {
+    display: block;
+    width: 100%;
+    background-color: var(--main-bg);
+    color: var(--main-text-color);
+    resize: none;
+    height: 70vh;
+}
+
+main .container textarea {
+    display: block;
+    width: 100%;
+    border: 0;
+}
+
+@media print {
+    body {
+        background-color: transparent;
+        min-height: auto;
+    }
+    h1, header {
+        display: none;
+    }
+    *, input, textarea {
+        color: black!important;
+        background-color: transparent!important;
+    }
+    main {
+        height: auto;
+    }
+}
